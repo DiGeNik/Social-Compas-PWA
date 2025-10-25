@@ -45,9 +45,8 @@
     <script>
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', () => {
-            // КОРЕКЦИЯ: Използва се двойният път за успешно зареждане от GitHub Pages
-            navigator.serviceWorker.register('/Social-Compas-PWA/Social-Compas-PWA/sw.js') 
-              .then(registration => {
+                navigator.serviceWorker.register('/Social-Compas-PWA/sw.js')
+                .then(registration => {
                 console.log('Service Worker регистриран успешно:', registration.scope);
               })
               .catch(error => {
