@@ -2,18 +2,14 @@
   "name": "Социален компас: Робинзон Крузо и AI",
   "short_name": "Социален компас",
   "description": "Приложение за балансиране на дигиталния и реалния свят.",
-  
-  // КОРЕКЦИЯ: Използва се единичен път за start_url и id
-  "start_url": "/Social-Compas-PWA/",
+    "start_url": "/Social-Compas-PWA/",
   "id": "/Social-Compas-PWA/",
-  
-  "display": "standalone",
+    "display": "standalone",
   "background_color": "#f8f8f8",
   "theme_color": "#22c55e",
   "orientation": "portrait",
   "icons": [
     {
-      // КОРЕКЦИЯ: Иконите вече използват единичен път
       "src": "/Social-Compas-PWA/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
