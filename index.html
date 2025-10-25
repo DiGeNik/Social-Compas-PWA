@@ -29,7 +29,9 @@
 <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/social-compas-pwa/sw.js')
+        // !!! КОРЕКЦИЯ: Пътят ТРЯБВА да съответства на структурата на GitHub Pages
+        // /social-compas-pwa/ е името на вашето хранилище
+        navigator.serviceWorker.register('/social-compas-pwa/sw.js') 
           .then(registration => {
             console.log('Service Worker регистриран успешно:', registration.scope);
           })
