@@ -26,7 +26,20 @@
         }
     </style>
 </head>
-<body>
+<script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('Service Worker регистриран успешно:', registration.scope);
+          })
+          .catch(error => {
+            console.log('Грешка при регистрация на Service Worker:', error);
+          });
+      });
+    }
+</script>
+    <body>
     <h1>Социален компас: Робинзон Крузо и AI</h1>
     <p>Добре дошли! Това е вашето Прогресивно уеб приложение (PWA).</p>
     <p>За да инсталирате, отворете менюто на браузъра и изберете "Инсталиране на приложението".</p>
