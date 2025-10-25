@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Социален компас</title>
-    
-    <link rel="manifest" href="./manifest.webmanifest">
+    <title>Социален компас: Робинзон Крузо и AI</title>
     
     <meta name="theme-color" content="#22c55e">
 
-    <link rel="apple-touch-icon" href="/icon-192.png">
+    <link rel="manifest" href="./manifest.webmanifest">
+    
+    <link rel="apple-touch-icon" href="./icon-192.png">
 
     <style>
         body {
@@ -24,27 +24,38 @@
             color: #22c55e;
             margin-top: 50px;
         }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
-<script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        // !!! КОРЕКЦИЯ: Пътят ТРЯБВА да съответства на структурата на GitHub Pages
-        // /social-compas-pwa/ е името на вашето хранилище
-        navigator.serviceWorker.register('/social-compas-pwa/sw.js') 
-          .then(registration => {
-            console.log('Service Worker регистриран успешно:', registration.scope);
-          })
-          .catch(error => {
-            console.log('Грешка при регистрация на Service Worker:', error);
+<body>
+    <div class="container">
+        <h1>Социален компас: Робинзон Крузо и AI</h1>
+        <p>Добре дошли в Прогресивното уеб приложение (PWA).</p>
+        <p>Нашата цел: Да балансираме дигиталния и реалния свят.</p>
+        <p>Ако PWA работи, трябва да видите опция за инсталиране на това приложение!</p>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            // КОРЕКЦИЯ: Използва се двойният път за успешно зареждане от GitHub Pages
+            navigator.serviceWorker.register('/Social-Compas-PWA/Social-Compas-PWA/sw.js') 
+              .then(registration => {
+                console.log('Service Worker регистриран успешно:', registration.scope);
+              })
+              .catch(error => {
+                // Трябва да видите тази грешка в конзолата, ако нещо е грешно
+                console.log('Грешка при регистрация на Service Worker:', error);
+              });
           });
-      });
-    }
-</script>
-    <body>
-    <h1>Социален компас: Робинзон Крузо и AI</h1>
-    <p>Добре дошли! Това е вашето Прогресивно уеб приложение (PWA).</p>
-    <p>За да инсталирате, отворете менюто на браузъра и изберете "Инсталиране на приложението".</p>
-    
-    </body>
+        }
+    </script>
+</body>
 </html>
