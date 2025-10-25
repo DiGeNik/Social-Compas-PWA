@@ -1,10 +1,12 @@
 const CACHE_NAME = 'social-compass-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.webmanifest',
-  '/icon-192.png',
-  '/icon-512.png',
+  const urlsToCache = [
+  '/social-compas-pwa/', // Коренната страница
+  '/social-compas-pwa/index.html',
+  '/social-compas-pwa/manifest.webmanifest',
+  '/social-compas-pwa/icon-192.png', 
+  '/social-compas-pwa/icon-512.png', 
+];
   // Добавете всички други ресурси (CSS, JS, други изображения) тук
 ];
 
