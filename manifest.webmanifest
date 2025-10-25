@@ -10,7 +10,7 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/Social-Compas-PWA/icon-192.png",,
+      "src": "/Social-Compas-PWA/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
